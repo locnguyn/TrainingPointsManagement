@@ -1,7 +1,7 @@
-package com.nxlpbth.controllers;
+package com.nxlpbth.services;
 
-
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.nxlpbth.pojo.Activity;
+import java.util.List;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author DELL
  */
-public class HomeController {
-    @RequestMapping("/")
-    public String index(){
-        return "index";
-    }
+public interface ActivityService {
+    List<Activity> getActivities();
+    Activity getActivityById(int id);
 }
